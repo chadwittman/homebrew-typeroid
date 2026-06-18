@@ -1,6 +1,6 @@
 cask "typeroid" do
   version "0.2.17"
-  sha256 "27b6ce80b15b203fb8593be9908d482b7be6c4cfa2638f1bfaae3fa7f2a70c2b"
+  sha256 "3657efeaa0b1f759118bf2d4cd61fe9fdf604aa21eae501945d9fbee3a89b2ea"
 
   url "https://github.com/chadwittman/typeroid/releases/download/v#{version}/typeROID.dmg",
       verified: "github.com/chadwittman/typeroid/"
