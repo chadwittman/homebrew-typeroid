@@ -26,7 +26,15 @@ spctl -a -v /Applications/typeROID.app
 ## Check for updates
 
 ```bash
+brew update
 brew livecheck --cask chadwittman/typeroid/typeroid
+brew upgrade --cask typeroid
+```
+
+If the menu bar still shows an older version after upgrading:
+
+```bash
+brew reinstall --cask chadwittman/typeroid/typeroid
 ```
 
 ## Uninstall
