@@ -29,7 +29,7 @@ spctl -a -v /Applications/typeROID.app
 brew reinstall --cask --force chadwittman/typeroid/typeroid
 ```
 
-This downloads the current cask and replaces the installed app, including a manually installed copy already in `/Applications`. The menu bar version should match the latest release after relaunch.
+This downloads the current cask and replaces the installed app, including a manually installed copy already in `/Applications`. It also installs `whisper-cpp` and downloads the local Whisper model for voice brief mode. The menu bar version should match the latest release after relaunch.
 
 ## Uninstall
 

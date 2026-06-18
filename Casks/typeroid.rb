@@ -9,6 +9,7 @@ cask "typeroid" do
   homepage "https://github.com/chadwittman/typeroid"
 
   depends_on macos: :sonoma
+  depends_on formula: "whisper-cpp"
 
   auto_updates true
 
@@ -21,9 +22,29 @@ cask "typeroid" do
     "~/.typeroid",
   ]
 
+  postflight do
+    model_dir = Pathname("#{Dir.home}/.typeroid/models")
+    model_path = model_dir/"ggml-tiny.en.bin"
+
+    FileUtils.mkdir_p(model_dir)
+    unless model_path.exist?
+      system_command "/usr/bin/curl",
+                     args: [
+                       "-L",
+                       "--fail",
+                       "-o", model_path,
+                       "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.en.bin",
+                     ]
+    end
+  end
+
   caveats <<~EOS
     To update an existing or manually installed copy:
       brew reinstall --cask --force chadwittman/typeroid/typeroid
+
+    Voice brief mode uses local Whisper. This cask installs whisper-cpp and
+    downloads the tiny English model to:
+      ~/.typeroid/models/ggml-tiny.en.bin
   EOS
 
   livecheck do
