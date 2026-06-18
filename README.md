@@ -23,19 +23,13 @@ codesign -dv --verbose=4 /Applications/typeROID.app
 spctl -a -v /Applications/typeROID.app
 ```
 
-## Check for updates
-
-```bash
-brew update
-brew livecheck --cask chadwittman/typeroid/typeroid
-brew upgrade --cask typeroid
-```
-
-If the menu bar still shows an older version after upgrading:
+## Update
 
 ```bash
 brew reinstall --cask chadwittman/typeroid/typeroid
 ```
+
+This downloads the current cask and replaces the installed app. The menu bar version should match the latest release after relaunch.
 
 ## Uninstall
 
