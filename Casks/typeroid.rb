@@ -21,6 +21,11 @@ cask "typeroid" do
     "~/.typeroid",
   ]
 
+  caveats <<~EOS
+    To update an existing or manually installed copy:
+      brew reinstall --cask --force chadwittman/typeroid/typeroid
+  EOS
+
   livecheck do
     url :url
     strategy :github_latest

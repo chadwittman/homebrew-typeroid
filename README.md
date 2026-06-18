@@ -26,10 +26,10 @@ spctl -a -v /Applications/typeROID.app
 ## Update
 
 ```bash
-brew reinstall --cask chadwittman/typeroid/typeroid
+brew reinstall --cask --force chadwittman/typeroid/typeroid
 ```
 
-This downloads the current cask and replaces the installed app. The menu bar version should match the latest release after relaunch.
+This downloads the current cask and replaces the installed app, including a manually installed copy already in `/Applications`. The menu bar version should match the latest release after relaunch.
 
 ## Uninstall
 
