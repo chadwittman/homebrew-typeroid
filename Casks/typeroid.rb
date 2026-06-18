@@ -11,8 +11,6 @@ cask "typeroid" do
   depends_on macos: :sonoma
   depends_on formula: "whisper-cpp"
 
-  auto_updates true
-
   app "typeROID.app"
 
   uninstall quit: "com.typeroid.app"
