@@ -1,6 +1,6 @@
 cask "typeroid" do
-  version "0.2.18"
-  sha256 "2b91ebfdda20be6d565d537bfb891bf0da046c680e03b941ab7ca262d99b0e6c"
+  version "0.2.25"
+  sha256 "37edeaabc6907557c6693adc2e16876a7d1e5bd7263d4334e1f80a37e482d44f"
 
   url "https://github.com/chadwittman/typeroid/releases/download/v#{version}/typeROID.dmg",
       verified: "github.com/chadwittman/typeroid/"
@@ -40,9 +40,12 @@ cask "typeroid" do
     To update an existing or manually installed copy:
       brew reinstall --cask --force chadwittman/typeroid/typeroid
 
-    Voice brief mode uses local Whisper. This cask installs whisper-cpp and
-    downloads the tiny English model to:
+    Fn dictation and voice brief use local Whisper. This cask installs whisper-cpp
+    and downloads the tiny English model to:
       ~/.typeroid/models/ggml-tiny.en.bin
+
+    Hold fn to talk. Double-tap fn for hands-free. Type ,, for a voice brief.
+    // never starts voice.
   EOS
 
   livecheck do
