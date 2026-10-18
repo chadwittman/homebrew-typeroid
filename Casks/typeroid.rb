@@ -1,6 +1,6 @@
 cask "typeroid" do
   version "0.2.25"
-  sha256 "37edeaabc6907557c6693adc2e16876a7d1e5bd7263d4334e1f80a37e482d44f"
+  sha256 "81a9e6d02e66cabfcb666857001dfc607486dc092e37dcb5848f72b757b07c99"
 
   url "https://github.com/chadwittman/typeroid/releases/download/v#{version}/typeROID.dmg",
       verified: "github.com/chadwittman/typeroid/"
@@ -44,8 +44,9 @@ cask "typeroid" do
     and downloads the tiny English model to:
       ~/.typeroid/models/ggml-tiny.en.bin
 
-    Hold fn to talk. Double-tap fn for hands-free. Type ,, for a voice brief.
-    // never starts voice.
+    Hold fn to talk. Double-tap fn for hands-free. Type ,, for the same dictation.
+    Ums and ahs come out. Sentences start with a capital, and the word I is capitalized.
+    It does not summarize. // never starts voice.
   EOS
 
   livecheck do
