@@ -5,7 +5,7 @@ cask "typeroid" do
   url "https://github.com/chadwittman/typeroid/releases/download/v#{version}/typeROID.dmg",
       verified: "github.com/chadwittman/typeroid/"
   name "typeROID"
-  desc "AI text cleanup in any app — type like a goblin, send like a grown-up"
+  desc "Hold fn and it types what you said. Then the shortcut stack."
   homepage "https://typeroid.xyz"
 
   depends_on macos: :sonoma
