@@ -1,12 +1,12 @@
 cask "typeroid" do
-  version "0.2.25"
-  sha256 "81a9e6d02e66cabfcb666857001dfc607486dc092e37dcb5848f72b757b07c99"
+  version "0.2.26"
+  sha256 "1c0da76b12bdb308dd674e3fe8f28c4df1ce7fafc7a0522fcfd3eb2184a54c56"
 
   url "https://github.com/chadwittman/typeroid/releases/download/v#{version}/typeROID.dmg",
       verified: "github.com/chadwittman/typeroid/"
   name "typeROID"
   desc "AI text cleanup in any app — type like a goblin, send like a grown-up"
-  homepage "https://github.com/chadwittman/typeroid"
+  homepage "https://typeroid.xyz"
 
   depends_on macos: :sonoma
   depends_on formula: "whisper-cpp"
