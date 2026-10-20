@@ -37,16 +37,19 @@ cask "typeroid" do
   end
 
   caveats <<~EOS
+    Installed typeROID #{version}.
+
     To update an existing or manually installed copy:
+      brew update
       brew reinstall --cask --force chadwittman/typeroid/typeroid
 
-    Fn dictation and voice brief use local Whisper. This cask installs whisper-cpp
+    Fn dictation uses local Whisper. This cask installs whisper-cpp
     and downloads the tiny English model to:
       ~/.typeroid/models/ggml-tiny.en.bin
 
-    Hold fn to talk. Double-tap fn for hands-free. Type ,, for the same dictation.
-    Ums and ahs come out. Sentences start with a capital, and the word I is capitalized.
-    It does not summarize. // never starts voice.
+    Hold the globe key to talk. Double-tap it for hands-free.
+    The next press stops and pastes. Arrow keys do not start the microphone.
+    // never starts voice.
   EOS
 
   livecheck do
