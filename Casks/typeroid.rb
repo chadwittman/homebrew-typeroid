@@ -36,8 +36,18 @@ cask "typeroid" do
     end
   end
 
-  caveats <<~EOS
-    Installed typeROID #{version}.
+  caveats do
+    app_plist = Pathname("/Applications/typeROID.app/Contents/Info.plist")
+    on_mac = nil
+    if app_plist.exist?
+      on_mac = `defaults read /Applications/typeROID.app/Contents/Info CFBundleShortVersionString 2>/dev/null`.strip
+      on_mac = nil if on_mac.empty?
+    end
+    installed_line = "This cask installs typeROID #{version}."
+    installed_line += "\nThe copy in /Applications is typeROID #{on_mac}." if on_mac
+
+    <<~EOS
+    #{installed_line}
 
     To update an existing or manually installed copy:
       brew update
@@ -50,7 +60,8 @@ cask "typeroid" do
     Hold the globe key to talk. Double-tap it for hands-free.
     The next press stops and pastes. Arrow keys do not start the microphone.
     // never starts voice.
-  EOS
+    EOS
+  end
 
   livecheck do
     url :url
